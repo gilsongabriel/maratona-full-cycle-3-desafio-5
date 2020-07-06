@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    build: ./.docker
+    container_name: maratona-full-cycle-desafio-5
+    entrypoint: ./.docker/entrypoint.sh
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
